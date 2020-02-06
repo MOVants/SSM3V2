@@ -13,7 +13,7 @@ public class DriversModule extends StringValues{
 	static String whoUser;
 
 	public void setBrowser() {
-		whoUser = "marvin";
+		whoUser = "arnie";
 		browser = "Chrome";
 	}
 	public void browserConfig () {
@@ -32,6 +32,8 @@ public class DriversModule extends StringValues{
 				System.setProperty("webdriver.chrome.driver", "/home/marvin/git/SSMV3/SSMWebV3/libs/chromeDriver/chromedriver");
 			}if (whoUser.contains("altair")) {
 				System.setProperty("webdriver.chrome.driver", "C:\\Users\\altair\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver");
+			}if (whoUser.contains("arnie")) {
+					System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
 			}
 		}
 		driver = new ChromeDriver();
@@ -101,7 +103,7 @@ public class DriversModule extends StringValues{
 		driver.findElement(By.id(middleNameField)).clear();
 		saveDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		if (driver.getPageSource().contains("This field is required."))
+		if (driver.getPageSource().contains("Driver Management"))
 		{
 			System.out.println("Create Driver Missing Middle Name- Test Pass");
 		}else {
@@ -156,10 +158,11 @@ public class DriversModule extends StringValues{
 		clickCreateDriverBtn();
 		Thread.sleep(1000);
 		setDriverDetails();
-		driver.findElement(By.id(emailField)).clear();
+		driver.findElement(By.id(emailField)).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		driver.findElement(By.id(emailField)).sendKeys(Keys.chord(Keys.DELETE));
 		saveDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		if (driver.getPageSource().contains("This field is required."))
+		if (driver.getPageSource().contains("Driver Management"))
 		{
 			System.out.println("Create Driver Missing Email- Test Pass");
 		}else {
@@ -179,7 +182,7 @@ public class DriversModule extends StringValues{
 		new Select(driver.findElement(By.id(genderDrpdwn))).selectByVisibleText("Male");
 		saveDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		if (driver.getPageSource().contains("This field is required."))
+		if (driver.getPageSource().contains("Driver Management"))
 		{
 			System.out.println("Create Driver Gender is Male- Test Pass");
 		}else {
@@ -217,8 +220,8 @@ public class DriversModule extends StringValues{
 		setDriverDetails();
 		driver.findElement(By.id(addressField)).clear();
 		saveDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		if (driver.getPageSource().contains("This field is required."))
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		if (driver.getPageSource().contains("Driver Management"))
 		{
 			System.out.println("Create Driver Missing Address- Test Pass");
 		}else {
@@ -471,7 +474,7 @@ public class DriversModule extends StringValues{
 		}
 	}
 
-	@Test
+	@Test 
 	public void modifyDriverDateOfBirth() throws Exception {
 		loginUser();
 		driverManagement();
@@ -502,7 +505,8 @@ public class DriversModule extends StringValues{
 		editDriverBtn();
 		Thread.sleep(1000);
 		setDriverDetails();
-		cancelCreateDriver();
+		Thread.sleep(1000);
+		cancelDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if (driver.getPageSource().contains("NAVIGATION"))
 		{

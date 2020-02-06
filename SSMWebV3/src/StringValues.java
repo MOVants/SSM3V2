@@ -8,7 +8,7 @@ public class StringValues {
 	
 	//user credentials
 	protected String authusername = "rosbel.clc@gmail.com";
-	protected String authpass = "admin";
+	protected String authpass = "admin0123";
 
 	//	login
 	protected String btnAuthLogin = "//button[@type='submit']";
@@ -17,7 +17,8 @@ public class StringValues {
 	protected String btnLogin = "//button[@type='submit']";
 
 	//	Home
-	protected String vehicleManagementBtn = "/html[1]/body[1]/section[1]/aside[1]/div[1]/div[1]/ul[1]/li[3]/a[1]";
+	protected String vehicleManagementBtn ="//span[text()='Vehicles']";
+			//"/html[1]/body[1]/section[1]/aside[1]/div[1]/div[1]/ul[1]/li[3]/a[1]";
 	protected String vehicleGroupManagementBtn = "/html[1]/body[1]/section[1]/aside[1]/div[1]/div[1]/ul[1]/li[4]/a[1]/span[1]";
 	protected String driverManagementBtn = "/html[1]/body[1]/section[1]/aside[1]/div[1]/div[1]/ul[1]/li[5]/a[1]";
 
@@ -58,7 +59,8 @@ public class StringValues {
 	protected String createBtn = "//text()[contains(.,'Create')]/ancestor::a[1]";
 	protected String vehicleGroupNameField = "vehicleGroupName";
 	protected String vehicleGroupDescField = "description";
-	protected String saveBtn = "//text()[contains(.,'Save')]/ancestor::button[1]";
+	protected String saveBtn ="//text()[contains(.,'Save')]/ancestor::button[1]";
+			//"//text()[contains(.,'Save')]/ancestor::button[1]";
 
 	// Drivers Modules
 	protected String editBtn = "/html[1]/body[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]";

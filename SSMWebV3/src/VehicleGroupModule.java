@@ -12,7 +12,7 @@ public class VehicleGroupModule extends StringValues{
 	static String whoUser;
 
 	public void setBrowser() {
-		whoUser = "marvin";
+		whoUser = "arnie";
 				
 		browser = "Chrome";
 		
@@ -34,9 +34,11 @@ public class VehicleGroupModule extends StringValues{
 				System.setProperty("webdriver.chrome.driver", "/home/marvin/git/SSMV3/SSMWebV3/libs/chromeDriver/chromedriver");
 			}if (whoUser.contains("altair")) {
 				System.setProperty("webdriver.chrome.driver", "C:\\Users\\altair\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver");
-			}
+			}if (whoUser.contains("arnie")) {
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
 		}
-		driver = new ChromeDriver();
+	}
+	driver = new ChromeDriver();
 	}
 
 	@Before
@@ -56,6 +58,7 @@ public class VehicleGroupModule extends StringValues{
 		setVehicleGroupInfo();
 		String getgroupName = driver.findElement(By.id(vehicleGroupNameField)).getText();
 		saveVehicleGroup();
+		Thread.sleep(1000);
 		String str = driver.findElement(By.xpath(getNotifSuccess)).getText();
 		if (str.contains(getgroupName)) {
 			System.out.println("Create Vehicle Group test = Passed!");

@@ -15,7 +15,7 @@ public class VehiclesModule extends StringValues {
 
 	public void setBrowser() {
 		
-		whoUser = "marvin";
+		whoUser = "arnie";
 
 		browser = "Chrome";
 
@@ -36,6 +36,8 @@ public class VehiclesModule extends StringValues {
 				System.setProperty("webdriver.chrome.driver", "/home/marvin/git/SSMV3/SSMWebV3/libs/chromeDriver/chromedriver");
 			}if (whoUser.contains("altair")) {
 				System.setProperty("webdriver.chrome.driver", "C:\\Users\\altair\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver");
+			}if (whoUser.contains("arnie")) {
+					System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
 			}
 		}
 		driver = new ChromeDriver();
@@ -63,7 +65,9 @@ public class VehiclesModule extends StringValues {
 		vehiclesManagement();
 		Thread.sleep(1000);
 		createVehicle();
+		Thread.sleep(1000);
 		setvehivleInformation();
+		Thread.sleep(1000);
 		setGPSInfo();
 		setFuelTankCalibration();
 		assignVehicleGroups();
@@ -83,7 +87,9 @@ public class VehiclesModule extends StringValues {
 		vehiclesManagement();
 		Thread.sleep(1000);
 		createVehicle();
+		Thread.sleep(1000);
 		setvehivleInformation();
+		Thread.sleep(1000);
 		driver.findElement(By.id(vehiclePlateField)).clear();
 		setGPSInfo();
 		setFuelTankCalibration();
@@ -129,6 +135,7 @@ public class VehiclesModule extends StringValues {
 		vehiclesManagement();
 		Thread.sleep(1000);
 		createVehicle();
+		Thread.sleep(1000);
 		setvehivleInformation();
 		driver.findElement(By.id(vehicleMilageField)).clear();
 		setGPSInfo();
@@ -151,8 +158,10 @@ public class VehiclesModule extends StringValues {
 		vehiclesManagement();
 		Thread.sleep(1000);
 		createVehicle();
+		Thread.sleep(1000);
 		setvehivleInformation();
 		driver.findElement(By.id(fuelConsumptionField)).clear();
+		Thread.sleep(1000);
 		setGPSInfo();
 		setFuelTankCalibration();
 		assignVehicleGroups();
@@ -173,7 +182,9 @@ public class VehiclesModule extends StringValues {
 		vehiclesManagement();
 		Thread.sleep(1000);
 		createVehicle();
+		Thread.sleep(1000);
 		setvehivleInformation();
+		Thread.sleep(1000);
 		driver.findElement(By.id(vehicleDescriptionField)).clear();
 		setGPSInfo();
 		setFuelTankCalibration();
@@ -193,6 +204,7 @@ public class VehiclesModule extends StringValues {
 		vehiclesManagement();
 		Thread.sleep(1000);
 		createVehicle();
+		Thread.sleep(1000);
 		setvehivleInformation();
 		driver.findElement(By.id("vehicle.description")).clear();
 		setGPSInfo();
@@ -232,6 +244,7 @@ public class VehiclesModule extends StringValues {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.id(vehiclePlateField)).sendKeys(RandomStringUtils.randomNumeric(5));
 		driver.findElement(By.id(vehiclechassisNumberField)).sendKeys(RandomStringUtils.randomNumeric(11));
+		Thread.sleep(1000);
 		driver.findElement(By.id(calPurchaseDate)).click();
 		driver.findElement(By.linkText(RandomStringUtils.randomNumeric(1))).click();
 		Thread.sleep(1000);
@@ -240,6 +253,7 @@ public class VehiclesModule extends StringValues {
 		}
 		driver.findElement(By.id(vehicleMilageField)).sendKeys(RandomStringUtils.randomNumeric(1));
 		driver.findElement(By.id(fuelConsumptionField)).sendKeys(RandomStringUtils.randomNumeric(1));
+		Thread.sleep(1000);
 		driver.findElement(By.id(drpdwnVehicleManufacturer)).click();
 		new Select(driver.findElement(By.id(drpdwnSelectVehicleManufacturer))).selectByVisibleText("Chevrolet");
 		driver.findElement(By.id(drpdwnVehicletype)).click();
@@ -256,6 +270,7 @@ public class VehiclesModule extends StringValues {
 		driver.findElement(By.xpath(doorSensorToggle)).click();
 		driver.findElement(By.id(firmwareVersionField)).sendKeys(RandomStringUtils.randomNumeric(1));
 		driver.findElement(By.id(appVersionField)).sendKeys(RandomStringUtils.randomNumeric(1));
+		Thread.sleep(1000);
 		driver.findElement(By.id(doorSensorInstallDate)).click();
 		driver.findElement(By.linkText(RandomStringUtils.randomNumeric(1))).click();
 		Thread.sleep(1000);
