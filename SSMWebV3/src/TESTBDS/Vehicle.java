@@ -23,7 +23,7 @@ public class Vehicle extends StringValues{
 		public void browserConfig () {
 
 			if (whoUser.contains("arnie")) {
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver",  "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromedr\\chromedriver.exe");
 			}
 			driver = new ChromeDriver();
 		}

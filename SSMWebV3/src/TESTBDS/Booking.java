@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Booking extends StringValues{
 	private WebDriver driver;
@@ -25,7 +26,7 @@ public class Booking extends StringValues{
 	public void browserConfig () {
 
 		if (whoUser.contains("arnie")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromedr\\chromedriver.exe");
 		}
 		driver = new ChromeDriver();
 	}
@@ -149,9 +150,13 @@ public class Booking extends StringValues{
 	}
 //Book client
 	private void bookclient() throws Exception {
-		driver.findElement(By.linkText(Addbookingbtn)).click();
+		driver.findElement(By.xpath(Addbookingbtn)).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(Customerfd)).click(); 
+		driver.findElement(By.xpath(Customerfd)).click();
+		Thread.sleep(2000);
+		
+	
+		driver.findElement(By.xpath(Customerfd)).click();
 		int i;
 
 		for ( i=1; i<5; i++) {
@@ -184,10 +189,10 @@ public class Booking extends StringValues{
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(Routefd)).click();
 		driver.findElement(By.xpath(Routefd)).sendKeys(Keys.ARROW_UP,Keys.ENTER);
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		driver.findElement(By.xpath(pickupdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(dropoffdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");
+		driver.findElement(By.xpath(dropoffdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");*/
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(vehiclefd)).click(); 
 		int x;
@@ -203,7 +208,7 @@ public class Booking extends StringValues{
 	}
 //Missing cargo Type	
 	private void Missingcargo() throws Exception {
-			driver.findElement(By.linkText(Addbookingbtn)).click();
+			driver.findElement(By.xpath(Addbookingbtn)).click();
 			Thread.sleep(2000);
 			driver.findElement(By.xpath(Customerfd)).click(); 
 			int i;
@@ -218,11 +223,11 @@ public class Booking extends StringValues{
 			Thread.sleep(1000);
 			driver.findElement(By.xpath(Routefd)).click();
 			driver.findElement(By.xpath(Routefd)).sendKeys(Keys.ARROW_UP,Keys.ENTER);
-			Thread.sleep(2000);
+			/*Thread.sleep(2000);
 			driver.findElement(By.xpath(pickupdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");
 			Thread.sleep(2000);
 			driver.findElement(By.xpath(dropoffdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");
-			Thread.sleep(2000);
+			Thread.sleep(2000);*/
 			driver.findElement(By.xpath(vehiclefd)).click(); 
 			int x;
 
@@ -237,7 +242,7 @@ public class Booking extends StringValues{
 		}
 //Missing Route	
 	private void MissingRoute() throws Exception {
-		driver.findElement(By.linkText(Addbookingbtn)).click();
+		driver.findElement(By.xpath(Addbookingbtn)).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(Customerfd)).click(); 
 		int i;
@@ -284,7 +289,7 @@ public class Booking extends StringValues{
 	}
 //Missing Vehicle	
 	private void MissingVehicle() throws Exception {
-		driver.findElement(By.linkText(Addbookingbtn)).click();
+		driver.findElement(By.xpath(Addbookingbtn)).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(Customerfd)).click(); 
 		int i;
@@ -295,7 +300,9 @@ public class Booking extends StringValues{
 
 			if(i == 4){
 				driver.findElement(By.xpath(Customerfd
-						)).sendKeys(Keys.ENTER);}}
+						)).sendKeys(Keys.ENTER);}
+			}
+		
 		Thread.sleep(3000);
 		driver.findElement(By.xpath(Cargofd)).click();
 		Thread.sleep(2000);
@@ -320,10 +327,10 @@ public class Booking extends StringValues{
 		driver.findElement(By.xpath(Routefd)).click();
 		driver.findElement(By.xpath(Routefd)).sendKeys(Keys.ARROW_UP,Keys.ENTER);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath(pickupdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");
+		/*driver.findElement(By.xpath(pickupdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath(dropoffdate)).sendKeys(RandomStringUtils.randomNumeric(4)+ "2020");
-		Thread.sleep(2000);
+		Thread.sleep(2000);*/
 		
 	}
 	

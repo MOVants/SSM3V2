@@ -21,43 +21,48 @@ public class StringValues {
 	protected String Passwordfield="//input[@type='password'][@class='q-field__native q-placeholder']";
 
 	//Booking
-	protected String Customerfd="//div[@id='q-app']/div/div/main/div/div/div/div[2]/div/div/div/div/div/input";
-	protected String Addbookingbtn="ADD BOOKING";//linkText
+	protected String Customerfd="//div[@id='q-app']/div/div/main/div/div/div/div[2]/label/div/div/div/div/input";
+	protected String Addbookingbtn="//a/div[2]/div/div";//linkText
 	//set cargo
-	protected String Cargofd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/div/div/div/div/div/input";
-	protected String Cargoquantityfd="//input[@type='number']";
-	protected String Cquantityuomfd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/input";
-	protected String Cargototalweightfd="(//input[@type='number'])[3]";
-	protected String Ctotaluomfd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/div[4]/div[2]/div/div/div/div/div/input";
+	protected String Cargofd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/label/div/div/div/div/input";
+	protected String Cargoquantityfd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/div/div/label/div/div/div/input";
+	protected String Cquantityuomfd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/div/div[2]/label/div/div/div/div/input";
+	protected String Cargototalweightfd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/div[3]/div/label/div/div/div/input";
+	protected String Ctotaluomfd="//div[@id='q-app']/div/div/main/div[2]/div/div/div[2]/div[3]/div[2]/label/div/div/div/div/input";
 	//set route
-	protected String Routefd="//div[@id='q-app']/div/div/main/div[3]/div/div/div[2]/div/div/div/div/div/div/div/input";
+	protected String Routefd="//div[@id='q-app']/div/div/main/div[3]/div/div/div[2]/div/div/label/div/div/div/div/input";
 	protected String pickupdate="(//input[@type='text'])[7]";
 	protected String dropoffdate="(//input[@type='text'])[8]";
 	//set vehicle
-	protected String vehiclefd="//div[@id='q-app']/div/div/main/div[4]/div/div/div[2]/div/div/div/div/div/input";
+	protected String vehiclefd="//div[@id='q-app']/div/div/main/div[4]/div/div/div[2]/div/div/label/div/div/div/div/input";
 	//Save
-	protected String Savebtn="//text()[contains(.,'Save')]/ancestor::button[1]";
+	protected String Savebtn="//div[@id='q-app']/div/div/main/div[5]/button/div[2]/div";
 	//Cancel
-	protected String Cancelbtn="//text()[contains(.,'Cancel')]/ancestor::a[1]";
-	
+	protected String Cancelbtn="//div[@id='q-app']/div/div/main/div[5]/div/a/div[2]/div";
+	//--hustling
+	protected String Cancel2btn="//div[2]/div/div[2]/button/div[2]/div";
 //Hustling
-	protected String Bookingbtn="//div[contains(text(),'Booking')]";
+	protected String Bookingbtn="//div[@id='q-app']/div/header/div/div/div[2]/div/button/div[2]/div/div";
 	protected String Hustlingbtn="//a[contains(text(),'Hustling')]";
-	protected String Addhustlingbtn="//text()[.='ADD BOOKING']/ancestor::button[1]";
-	protected String Selectcustomer="//input[@class='q-select__input q-placeholder col']";
-	protected String Inputcargotype="//input[@type='text'][@class='q-field__native q-placeholder']";
-	protected String inputunload="//div[@class='q-dialog fullscreen no-pointer-events']//div[3]//div[1]//div[1]//div[1]//input[1]";
+	protected String Addhustlingbtn="//div[@id='q-app']/div/div/div/div/div/div/div[3]/div/button/div[2]/div";
+	protected String Selectcustomer="//div[2]/div/label/div/div/div/div/input";
+	protected String Inputcargotype="//label[2]/div/div/div/input";
+	protected String inputunload="//label[3]/div/div/div/input";
+	//
+	protected String tosave="//div[2]/button[2]/div[2]/div";
 	
 //Customer
-	protected String customerbtn="a[href='#/customer/list']";
-	protected String Addcustomerbtn=" /html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/button[1]";
-	protected String Companyname="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]";
-	protected String Customercode="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]";
-	protected String Personincharge="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/input[1]";
-	protected String Contactnumb="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/input[1]";
-	protected String Address="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[5]/div[1]/div[1]/div[1]/input[1]";
-	protected String EmailAdd="html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[6]/div[1]/div[1]/div[1]/input[1]";
-	protected String CancelCustomer="//text()[.='Cancel']/ancestor::button[1]";
+	protected String customerbtn="//div[@id='q-app']/div/header/div/div/div[2]/div/a[2]/div[2]/div";
+	protected String Addcustomerbtn="//div[@id='customer-table']/div/div/div[3]/button/div[2]/div/div";
+	protected String Companyname="//div[2]/label/div/div/div/input";
+	protected String Customercode="//label[2]/div/div/div/input";
+	protected String Personincharge="//label[3]/div/div/div/input";
+	protected String Contactnumb="//label[4]/div/div/div/input";
+	protected String Address="//label[5]/div/div/div/input";
+	protected String EmailAdd="//label[6]/div/div/div/input";
+	//
+	protected String savecustomer="//div[3]/button[2]/div[2]/div";
+	protected String CancelCustomer="//div[2]/div/div[3]/button/div[2]/div/div";
 
 //Vehicle
 	
@@ -74,7 +79,7 @@ public class StringValues {
 	protected String MISCbtn="//div[contains(text(),'Misc')]";
 	protected String Activitybtn="Activity";//linkText
 	protected String Addactivity="/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/button[1]";
-	protected String Selectstatus="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]";
+	protected String Selectstatus="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/label[1]/div[1]/div[1]/div[2]/i[1]";
 	protected String Inputactivity="/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input[1]";
 
 //REPORTS

@@ -26,7 +26,7 @@ public class Hustling extends StringValues {
 	public void browserConfig () {
 
 		if (whoUser.contains("arnie")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",  "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromedr\\chromedriver.exe");
 		}
 		driver = new ChromeDriver();
 	}
@@ -111,7 +111,7 @@ public void MissingTotalunload() throws Exception{
 	driver.findElement(By.xpath(inputunload)).sendKeys(Keys.CONTROL,"a", Keys.BACK_SPACE);
 	Thread.sleep(2000);
 	SaveBTN();
-	if (driver.getPageSource().contains("Required"))
+	if (driver.getPageSource().contains("Total number to unload should be numeric"))
 	{
 		System.out.println("Missing Total Unload- Test Pass");
 	}else {
@@ -180,10 +180,10 @@ private void Missingcustomer() throws Exception {
 
 }
 private void SaveBTN() {
-	driver.findElement(By.xpath(Savebtn)).click();
+	driver.findElement(By.xpath(tosave)).click();
 }
 private void CancelBTN() {
-	driver.findElement(By.xpath(Cancelbtn)).click();
+	driver.findElement(By.xpath(Cancel2btn)).click();
 }
 
 @After

@@ -24,10 +24,10 @@ public class MISC extends StringValues {
 			public void browserConfig () {
 
 				if (whoUser.contains("arnie")) {
-					System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
+					System.setProperty("webdriver.chrome.driver",  "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromedr\\chromedriver.exe");
 				}
 				driver = new ChromeDriver();
-			}
+			}e
 			
 			
 			@Before
@@ -42,6 +42,7 @@ public class MISC extends StringValues {
 			@Test
 			public void CreateActivity() throws Exception {
 				loginUser();
+				Thread.sleep(2000);
 				Activityinfo();
 				SaveBTN();
 				Thread.sleep(2000);
@@ -57,6 +58,7 @@ public class MISC extends StringValues {
 			@Test
 			public void CancelActivity() throws Exception {
 				loginUser();
+				Thread.sleep(2000);
 				Activityinfo();
 				CancelBTN();
 				Thread.sleep(2000);
@@ -73,7 +75,22 @@ public class MISC extends StringValues {
 			@Test
 			public void MissingActivity() throws Exception {
 				loginUser();
+				Thread.sleep(2000);
 				Activityinfo();
+				driver.findElement(By.xpath(MISCbtn)).click(); 
+				driver.findElement(By.linkText(Activitybtn)).click(); 
+				Thread.sleep(2000);
+				driver.findElement(By.xpath(Addactivity)).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath(Selectstatus)).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath(Selectstatus)).sendKeys(Keys.ARROW_DOWN);
+				Thread.sleep(2000);
+				driver.findElement(By.xpath(Selectstatus)).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+				Thread.sleep(3000);
+				driver.findElement(By.xpath(Inputactivity)).sendKeys("Travel to " + RandomStringUtils.randomAlphabetic(5)); 
+				Thread.sleep(2000);
+				
 				driver.findElement(By.xpath(Inputactivity)).sendKeys(Keys.CONTROL,"a", Keys.BACK_SPACE);
 				SaveBTN();
 				Thread.sleep(2000);

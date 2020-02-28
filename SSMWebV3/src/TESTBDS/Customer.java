@@ -24,7 +24,7 @@ public class Customer extends StringValues {
 	public void browserConfig () {
 
 		if (whoUser.contains("arnie")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromeDriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",  "C:\\Users\\BLACK PHOENIX\\git\\SSMV3\\SSMWebV3\\libs\\chromedr\\chromedriver.exe");
 		}
 		driver = new ChromeDriver();
 	}
@@ -43,7 +43,7 @@ public class Customer extends StringValues {
 		loginUser();
 		//driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector(customerbtn)).click(); 
+		driver.findElement(By.xpath(customerbtn)).click(); 
 		//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 		Customerinfo();
@@ -64,7 +64,7 @@ public class Customer extends StringValues {
 			loginUser();
 			//driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			Thread.sleep(3000);
-			driver.findElement(By.cssSelector(customerbtn)).click(); 
+			driver.findElement(By.xpath(customerbtn)).click(); 
 			//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			Thread.sleep(3000);
 			Customerinfo();
@@ -84,7 +84,7 @@ public class Customer extends StringValues {
 			loginUser();
 			//driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			Thread.sleep(3000);
-			driver.findElement(By.cssSelector(customerbtn)).click(); 
+			driver.findElement(By.xpath(customerbtn)).click(); 
 			//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			Thread.sleep(3000);
 			Customerinfo();
@@ -104,7 +104,7 @@ public class Customer extends StringValues {
 			loginUser();
 			//driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			Thread.sleep(3000);
-			driver.findElement(By.cssSelector(customerbtn)).click(); 
+			driver.findElement(By.xpath(customerbtn)).click(); 
 			//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			Thread.sleep(3000);
 			Customerinfo();
@@ -124,7 +124,7 @@ public class Customer extends StringValues {
 			loginUser();
 			//driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			Thread.sleep(3000);
-			driver.findElement(By.cssSelector(customerbtn)).click(); 
+			driver.findElement(By.xpath(customerbtn)).click(); 
 			//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			Thread.sleep(3000);
 			Customerinfo();
@@ -145,7 +145,7 @@ public class Customer extends StringValues {
 			loginUser();
 			//driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			Thread.sleep(3000);
-			driver.findElement(By.cssSelector(customerbtn)).click(); 
+			driver.findElement(By.xpath(customerbtn)).click(); 
 			//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			Thread.sleep(3000);
 			Customerinfo();
@@ -165,7 +165,7 @@ public class Customer extends StringValues {
 			loginUser();
 			//driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 			Thread.sleep(3000);
-			driver.findElement(By.cssSelector(customerbtn)).click(); 
+			driver.findElement(By.xpath(customerbtn)).click(); 
 			//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			Thread.sleep(3000);
 			Customerinfo();
@@ -197,7 +197,7 @@ public class Customer extends StringValues {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 	}
 	private void SaveBTN() {
-		driver.findElement(By.xpath(Savebtn)).click();
+		driver.findElement(By.xpath(savecustomer)).click();
 	}
 	private void CancelBTN() {
 		driver.findElement(By.xpath(CancelCustomer)).click();
